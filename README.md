@@ -50,3 +50,6 @@ If you need more than one group, read on.
 Only 25 config scripts are included in this repository, and only for group 1. However, you can very easily add more scripts if this is not enough. If you want to add support for config 01-26, for example, simply clone the file "RTS Use config 01-25.lua", rename it appropriately, and then open it in Notepad and change the number "25" to "26". Scripts for additional groups can be created just as easily.
 
 By default, RTS supports up to 32 groups and up to 128 configs per group. You can increase these limits; see "RTS Utils.lua".
+
+## Disclaimer
+These scripts are third-party extensions to Reaper and are not endorsed by its maintainers. There is absolutely no warranty provided for these scripts. You may use the scripts for any legal purpose you desire, but no support is offered.
