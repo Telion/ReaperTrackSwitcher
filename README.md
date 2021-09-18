@@ -53,5 +53,3 @@ Only 25 config scripts are included in this repository, and only for group 1. Ho
 
 By default, RTS supports up to 32 groups and up to 128 configs per group. You can increase these limits; see "RTS Utils.lua".
 
-## Disclaimer
-These scripts are third-party extensions to Reaper and are not endorsed by its maintainers. There is absolutely no warranty provided for these scripts. You may use the scripts for any legal purpose you desire, but no support is offered.
