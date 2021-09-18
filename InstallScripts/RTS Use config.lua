@@ -26,8 +26,36 @@ function useConfig(group, config)
     local track = utils.getTrackByGuid(guid);
     if not utils.contains(currentGuids, guid) then
       reaper.SetMediaTrackInfo_Value(track, "I_FXEN", 0);
+      reaper.SetMediaTrackInfo_Value(track, "B_MUTE", 1);
+      found = false;
+      for j = 1, reaper.TrackFX_GetCount(track, 1) do
+        buf = "_"
+        retval, buf = reaper.TrackFX_GetFXName(track, j, buf);
+        if retval and string.sub(buf, 1, 1) == "*" then
+          reaper.TrackFX_Show(track, j, 2);
+          found = true;
+          break;
+        end;
+      end;
+      if not found then
+      	reaper.TrackFX_Show(track, 0, 2);
+      end;
     else
       reaper.SetMediaTrackInfo_Value(track, "I_FXEN", 1);
+      reaper.SetMediaTrackInfo_Value(track, "B_MUTE", 0);
+      found = false;
+      for j = 1, reaper.TrackFX_GetCount(track, 1) do
+        buf = "_"
+        retval, buf = reaper.TrackFX_GetFXName(track, j, buf);
+        if retval and string.sub(buf, 1, 1) == "*" then
+          reaper.TrackFX_Show(track, j, 3);
+          found = true;
+          break;
+        end;
+      end;
+      if not found then
+      	reaper.TrackFX_Show(track, 0, 3);
+      end;
     end;
   end;
 end;

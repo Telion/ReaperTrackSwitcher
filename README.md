@@ -30,6 +30,8 @@ Next run the action "RTS Use config 01-02.lua". Then select a different track an
 
 Now try switching back and forth between configs 01-01 and 01-02. Notice how it affects each of the tracks you selected. RTS will only modify tracks that have been placed in one of your configs; unlisted tracks will not be modified.
 
+By default RTS will display the first FX on the track. To display a different one, change its name to start with an asterisk (*).
+
 Run the action "RTS Display all configs.lua" for a summary of what you have done.
 
 At this point you are ready to go! You might want to set a shortcut key or MIDI code to trigger each of your selected configs.
